@@ -4,46 +4,100 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
+  font: 12px "Montserrat", sans-serif;
   display: flex;
-  height: 100%;
-}
-
-div {
-  height: 100vh;
-}
-
-div:first-of-type {
-  background-color: red;
-  position: fixed;
-  min-width: 100vw;
-  min-height: 100vh;
-
-  z-index: -1;
-}
-/*
-disv:last-of-type::before {
-  content: "";
-position: absolute;
-top: 0;
-bottom: 0;
-right: 0;
-left: 0;
-height: 100%;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.85);
-} 
-*/
-
-div:last-of-type {
-  background-color: #000;
-
-  width: 65vw;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  z-index: 2;
-  display: flex;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
 
-  justify-content: center;
+header h1 {
+  padding: 5px 15px;
+  position: relative;
+  top: 35px;
+  left: 25px;
+  display: inline-block;
+
+  font-size: 2.8rem;
+  color: #fff;
+  letter-spacing: -2px;
+  font-weight: 800;
+
+  line-height: 0.88em;
+  transform: translateX(5vw);
+  opacity: 0;
+
+  animation: ease-out 0.9s animeTitle forwards;
+}
+
+header > * {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+@keyframes animeTitle {
+  0% {
+    transform: translateX(5vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+header {
+  height: 80vh;
+  background: url("./img/imgTopo.jpg") 0 -70px no-repeat;
+  background-size: 100vw;
+  display: flex;
+}
+
+article {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+p {
+  text-align: right;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.856);
+  padding-right: 25px;
+}
+
+a.whatsapp:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 23, 0, 0.05);
+  box-shadow: 0px 5px 10px rgba(0, 23, 0, 0.05);
+}
+
+a.whatsapp {
+  background: none;
+  bottom: 106px;
+  position: fixed;
+  right: 20px;
+  width: 5rem;
+  z-index: 19;
+}
+
+a.whatsapp img {
+  max-width: 100%;
+  transition: transform ease-in 0.21s, -webkit-transform ease-in 0.21s;
+}
+
+a.whatsapp:hover img {
+  -webkit-transform: scale(90%);
+  transform: scale(90%);
 }
