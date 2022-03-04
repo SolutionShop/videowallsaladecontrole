@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 12px "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 30px;
+  img {
+    display: block;
+    align-self: center;
+    width: 80%;
+    max-width: 370px;
+  }
+}
+
+header > * {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+@keyframes animeTitle {
+  0% {
+    transform: translateX(5vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+header {
+  min-height: 300px;
+  background: url("../img/imgTopo.jpg") -200px -70px no-repeat;
+  background-size: 190vw;
+  display: flex;
+
+  align-items: end;
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+    bottom: -25px;
+    span {
+      background-color: #ff4a1c;
+      align-self: flex-end;
+      padding: 5px 15px;
+      line-height: 40px;
+    }
+    span:nth-of-type(2) {
+      line-height: 20px;
+      font-size: 1.5rem;
+    }
+
+    /*
+    left: 25px;
+    */
+
+    font-size: 1.8rem;
+    color: #fff;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    line-height: 0.88em;
+    transform: translateX(5vw);
+    opacity: 0;
+
+    animation: ease-out 0.9s animeTitle forwards;
+  }
+}
+
+article {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.856);
+  padding: 0 10px;
+}
+
+a {
+  &.whatsapp {
+    background: none;
+    bottom: 46px;
+    position: fixed;
+    right: 20px;
+    width: 5rem;
+    z-index: 19;
+
+    img {
+      max-width: 100%;
+      transition: transform ease-in 0.21s, -webkit-transform ease-in 0.21s;
+    }
+
+    &:hover {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-box-shadow: 0px 5px 10px rgba(0, 23, 0, 0.05);
+      box-shadow: 0px 5px 10px rgba(0, 23, 0, 0.05);
+
+      img {
+        -webkit-transform: scale(90%);
+        transform: scale(90%);
+      }
+    }
+  }
+}
+
+section {
+  padding: 50px 12px;
+
+  &.brands {
+    padding: 30px 12px;
+  }
+}
+
+ul.features {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    height: 60px;
+    list-style: none;
+    line-height: 60px;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+
+    &:nth-child(odd) {
+      background-color: rgb(245, 245, 245);
+    }
+  }
+}

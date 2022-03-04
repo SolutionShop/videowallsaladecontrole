@@ -55,9 +55,9 @@ header > * {
 }
 
 header {
-  height: 80vh;
-  background: url("./img/imgTopo.jpg") 0 -70px no-repeat;
-  background-size: 100vw;
+  height: 90vh;
+  background: url("./img/imgTopo.jpg") -200px 0px no-repeat;
+  background-size: 190vw;
   display: flex;
 }
 
