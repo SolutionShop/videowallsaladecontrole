@@ -52,12 +52,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   gap: 30px;
+
+  img:first-child {
+    margin-bottom: 28px;
+  }
+
   img {
     display: block;
     align-self: center;
-    width: 80%;
+    width: 68%;
     max-width: 370px;
   }
 }
