@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,6 +24,30 @@ body {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
+.phrase {
+  span + span {
+    position: relative;
+    left: -20px;
+  }
+
+  flex-direction: column;
+
+  margin: 40px 0;
+  min-height: 250px;
+  display: flex;
+
+  justify-content: center;
+
+  background-color: #ff4a1c;
+
+  background-image: url("../img/videowall2.jpg");
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
 .brands {
   display: flex;
   flex-direction: column;
@@ -32,12 +61,12 @@ body {
     max-width: 370px;
   }
 }
-
+/*
 header > * {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
 }
-
+*/
 @keyframes animeTitle {
   0% {
     transform: translateX(5vw);
@@ -50,7 +79,30 @@ header > * {
   }
 }
 
+span.featured {
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: -2px;
+  font-weight: 800;
+
+  line-height: 0.88em;
+  transform: translateX(5vw);
+  opacity: 0;
+
+  animation: ease-out 0.9s animeTitle forwards;
+
+  background-color: #ff4a1c;
+  align-self: flex-end;
+  padding: 5px 15px;
+  line-height: 40px;
+}
+
 header {
+  span.featured:nth-of-type(2) {
+    line-height: 20px;
+    font-size: 1.5rem;
+  }
+
   min-height: 300px;
   background: url("../img/imgTopo.jpg") -200px -70px no-repeat;
   background-size: 190vw;
@@ -66,21 +118,11 @@ header {
     width: 100%;
     position: relative;
     bottom: -25px;
-    span {
-      background-color: #ff4a1c;
-      align-self: flex-end;
-      padding: 5px 15px;
-      line-height: 40px;
-    }
-    span:nth-of-type(2) {
-      line-height: 20px;
-      font-size: 1.5rem;
-    }
 
     /*
     left: 25px;
     */
-
+    /*
     font-size: 1.8rem;
     color: #fff;
     letter-spacing: -2px;
@@ -91,6 +133,7 @@ header {
     opacity: 0;
 
     animation: ease-out 0.9s animeTitle forwards;
+  */
   }
 }
 
