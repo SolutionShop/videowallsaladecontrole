@@ -55,7 +55,7 @@ body {
   gap: 30px;
 
   img:first-child {
-    margin-bottom: 28px;
+    margin: 19px 0 28px;
   }
 
   img {
@@ -210,5 +210,17 @@ ul.features {
     &:nth-child(odd) {
       background-color: rgb(245, 245, 245);
     }
+  }
+}
+
+section.product {
+  height: 300px;
+  text-align: center;
+
+  img {
+    max-width: 80%;
+
+    position: relative;
+    top: -140px;
   }
 }
