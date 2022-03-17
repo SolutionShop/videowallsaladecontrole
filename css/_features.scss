@@ -1,0 +1,30 @@
+ul.features {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    border-radius: 8px;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.12rem;
+    font-weight: 800;
+    height: 60px;
+    line-height: 60px;
+    list-style-type: disc;
+    list-style-position: inside;
+    // list-style-type: "→ ";
+    padding-left: 12px;
+    color: #ff4a1c;
+    &:nth-child(odd) {
+      color: #fff;
+      // color: #333;
+      color: #ff4a1c;
+      background-color: rgba(255, 74, 28, 0.9);
+      background: rgb(246, 246, 246);
+
+      // background-color: rgba(245, 245, 245, 0.4);
+    }
+  }
+}

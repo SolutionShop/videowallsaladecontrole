@@ -173,9 +173,6 @@ a {
     &:hover {
       -webkit-transform: scale(1);
       transform: scale(1);
-      -webkit-box-shadow: 0px 5px 10px rgba(0, 23, 0, 0.05);
-      box-shadow: 0px 5px 10px rgba(0, 23, 0, 0.05);
-
       img {
         -webkit-transform: scale(90%);
         transform: scale(90%);
@@ -189,26 +186,6 @@ section {
 
   &.brands {
     padding: 30px 12px;
-  }
-}
-
-ul.features {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-
-  li {
-    border-radius: 8px;
-    font-family: Montserrat, sans-serif;
-    font-size: 1rem;
-    height: 60px;
-    line-height: 60px;
-    list-style: none;
-
-    &:nth-child(odd) {
-      background-color: rgb(245, 245, 245);
-    }
   }
 }
 
@@ -261,4 +238,5 @@ section.sales {
     font-size: 0.8rem;
   }
 }
+@import "./_features.scss";
 @import "./_footer.scss";
