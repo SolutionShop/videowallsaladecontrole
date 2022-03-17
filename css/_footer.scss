@@ -10,6 +10,11 @@ footer {
 
     display: block;
     margin: -75px auto 0;
+
+    @media (min-width: 800px) {
+      margin: -78px auto 0;
+      max-width: 25vw;
+    }
   }
 
   p {
