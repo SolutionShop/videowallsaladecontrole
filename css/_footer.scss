@@ -1,0 +1,31 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 75px;
+
+  img {
+    max-width: 80vw;
+
+    display: block;
+    margin: -75px auto 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 25px;
+
+    a {
+      display: inline-block;
+      color: #000;
+      font-weight: 800;
+      line-height: 45px;
+      padding: 15px auto;
+    }
+  }
+
+  padding: 0 0 10px;
+  background: rgb(245, 245, 245);
+  background: linear-gradient(135deg, rgba(245, 245, 245, 1) 31%, rgba(255, 255, 255, 1) 66%);
+}
